@@ -1,9 +1,13 @@
+import cors from 'cors';
 import express from 'express';
+import { events } from './db';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
+app.use(cors())
+
+app.get('/events', (req, res) => {
+  res.json(events);
 });
 
 const port = process.env.POST || 4000;
