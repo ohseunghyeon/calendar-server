@@ -1,23 +1,23 @@
 {
   "name": "calendar-server",
   "version": "1.0.0",
-  "description": "일정 관리용 캘린더 서버",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/ohseunghyeon/calendar-server.git"
-  },
-  "keywords": [
-    "node",
-    "calendar"
-  ],
-  "author": "ohseunghyeon",
+  "repository": "git@github.com:ohseunghyeon/calendar-server.git",
+  "author": "ohseunghyeon <postercolo@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ohseunghyeon/calendar-server/issues"
+  "private": true,
+  "scripts": {
+    "start": "ts-node index.ts",
+    "format": "prettier \"**/*.ts\" --write"
   },
-  "homepage": "https://github.com/ohseunghyeon/calendar-server#readme"
+  "devDependencies": {
+    "@types/express": "4.17.0",
+    "@types/node": "12.6.9",
+    "prettier": "1.18.2",
+    "ts-node": "8.3.0",
+    "typescript": "3.5.3"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  }
 }
