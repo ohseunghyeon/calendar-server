@@ -1,0 +1,23 @@
+{
+  "name": "calendar-server",
+  "version": "1.0.0",
+  "description": "일정 관리용 캘린더 서버",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ohseunghyeon/calendar-server.git"
+  },
+  "keywords": [
+    "node",
+    "calendar"
+  ],
+  "author": "ohseunghyeon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ohseunghyeon/calendar-server/issues"
+  },
+  "homepage": "https://github.com/ohseunghyeon/calendar-server#readme"
+}
