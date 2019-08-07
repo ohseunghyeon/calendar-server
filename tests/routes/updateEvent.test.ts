@@ -3,7 +3,6 @@ import app from '../../app';
 import db, { Event } from '../../db';
 import { ERROR } from '../../contants';
 
-
 describe('PUT /events, controller updateEvent', () => {
   it('should return status 400 if id is not provided', done => {
     request(app)
@@ -37,13 +36,13 @@ describe('PUT /events, controller updateEvent', () => {
       .expect({ error: ERROR.EVENT_PROPS_NEEDED }, done);
   });
 
-  it('should return status 400 if provided id does not exist', (done) => {
+  it('should return status 400 if provided id does not exist', done => {
     request(app)
       .put('/events')
       .send({ id: 0, title: '바꿀 이름', start: 1, end: 10 })
       .expect(400)
-      .expect({ error: ERROR.WRONG_ID }, done)
-  })
+      .expect({ error: ERROR.WRONG_ID }, done);
+  });
 
   it('should return updated event', done => {
     const event: Event = { title: '추가할 이벤트', start: 100, end: 1000 };
@@ -72,7 +71,7 @@ describe('PUT /events, controller updateEvent', () => {
           .send(event)
           .expect(200)
           .expect(event, done);
-      })
+      });
   });
 
   it('should return status 400 if the provided time is already occupied', done => {
@@ -96,11 +95,15 @@ describe('PUT /events, controller updateEvent', () => {
 
             request(app)
               .put('/events')
-              .send({ id: event1.id, title: '책 보기', start: event2.start, end: event2.end })
+              .send({
+                id: event1.id,
+                title: '책 보기',
+                start: event2.start,
+                end: event2.end,
+              })
               .expect(400)
               .expect({ error: ERROR.OCCUPIED_TIME }, done);
-          })
-      })
+          });
+      });
   });
-
 });

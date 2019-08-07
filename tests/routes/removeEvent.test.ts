@@ -17,9 +17,9 @@ describe('DELETE /events, controller removeEvent', () => {
       .send({ id: 0 })
       .expect(400)
       .expect({ error: ERROR.WRONG_ID }, done);
-  })
+  });
 
-  it('should remove the event of id and return the event', (done) => {
+  it('should remove the event of id and return the event', done => {
     const event: Event = { title: '추가할 이벤트', start: 100, end: 1000 };
 
     request(app)
@@ -38,7 +38,6 @@ describe('DELETE /events, controller removeEvent', () => {
           .send({ id: event.id })
           .expect(200)
           .expect(event, done);
-      })
-  })
-
+      });
+  });
 });

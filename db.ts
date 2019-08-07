@@ -57,5 +57,5 @@ function remove(id: number) {
 export default {
   insert,
   select,
-  remove
+  remove,
 };

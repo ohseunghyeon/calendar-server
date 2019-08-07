@@ -13,7 +13,7 @@ const createEvents = (req: express.Request, res: express.Response) => {
 
   if (start >= end) {
     res.status(400);
-    return res.json({ error: ERROR.END_SHOULD_BE_BIGGER_THAN_START })
+    return res.json({ error: ERROR.END_SHOULD_BE_BIGGER_THAN_START });
   }
 
   const events = db.select();

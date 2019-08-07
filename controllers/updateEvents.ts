@@ -30,7 +30,7 @@ const updateEvents = (req: express.Request, res: express.Response) => {
   filteredEvent.start = start;
   filteredEvent.end = end;
 
-  res.json(filteredEvent)
+  res.json(filteredEvent);
 };
 
 export default updateEvents;

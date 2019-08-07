@@ -26,7 +26,7 @@ describe('function filterOverlapedEvent', () => {
     isOverlapped = isTimeOccupied(events, { start: 35, end: 45 });
     expect(isOverlapped).toBe(true);
 
-    // start is between existing start and end and end is the same 
+    // start is between existing start and end and end is the same
     isOverlapped = isTimeOccupied(events, { start: 40, end: 50 });
     expect(isOverlapped).toBe(true);
 

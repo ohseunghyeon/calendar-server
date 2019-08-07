@@ -13,10 +13,9 @@ const getEvents = (req: express.Request, res: express.Response) => {
 
   const events = db.select();
 
-  const filteredEvents = filterEventsByTime(events, { start, end })
+  const filteredEvents = filterEventsByTime(events, { start, end });
 
   res.json(filteredEvents);
 };
-
 
 export default getEvents;
