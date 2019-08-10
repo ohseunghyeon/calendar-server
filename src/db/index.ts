@@ -9,8 +9,8 @@ export const events: Event[] = [
   {
     id: 1,
     title: 'meeting friends',
-    start: new Date('2019-08-06T01:00:00').getTime(),
-    end: new Date('2019-08-06T02:00:00').getTime(),
+    start: new Date('2019-08-06T08:00:00Z').getTime(),
+    end: new Date('2019-08-06T09:00:00Z').getTime(),
   },
   {
     id: 2,
@@ -21,8 +21,8 @@ export const events: Event[] = [
   {
     id: 3,
     title: 'reading a book',
-    start: new Date('2019-08-06T08:00:00').getTime(),
-    end: new Date('2019-08-06T09:00:00').getTime(),
+    start: new Date('2019-08-06T03:00:00').getTime(),
+    end: new Date('2019-08-06T04:00:00').getTime(),
   },
   {
     id: 4,

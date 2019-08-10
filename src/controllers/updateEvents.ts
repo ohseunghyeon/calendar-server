@@ -19,7 +19,12 @@ const updateEvents = (req: express.Request, res: express.Response) => {
     return res.json({ error: ERROR.WRONG_ID });
   }
 
-  if (isTimeOccupied(events, { start, end })) {
+  if (start >= end) {
+    res.status(400);
+    return res.json({ error: ERROR.END_SHOULD_BE_BIGGER_THAN_START });
+  }
+
+  if (isTimeOccupied(events, { id, start, end })) {
     res.status(400);
     return res.json({ error: ERROR.OCCUPIED_TIME });
   }

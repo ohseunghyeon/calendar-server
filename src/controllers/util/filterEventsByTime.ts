@@ -5,6 +5,9 @@ interface filterEventsProps {
   end: number;
 }
 
+/**
+ * filter로 사용할 start, end에 의해서 검색하려는 일정들의 시간 일부라도 겹치면 filter하게 됩니다.
+ */
 function filterEventsByTime(
   events: Event[],
   { start, end }: filterEventsProps
