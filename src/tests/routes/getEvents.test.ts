@@ -20,13 +20,13 @@ describe('GET /events, controller getEvents', () => {
     request(app)
       .get('/events?end=1565161555751')
       .expect(400)
-      .expect(ERROR.START_END_NEEDED, done);
+      .expect({ error: ERROR.START_END_NEEDED }, done);
   });
 
   it('should return statue 400 and error message if no end is provided', done => {
     request(app)
       .get('/events?start=1565157955751')
       .expect(400)
-      .expect(ERROR.START_END_NEEDED, done);
+      .expect({ error: ERROR.START_END_NEEDED }, done);
   });
 });
