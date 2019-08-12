@@ -5,7 +5,6 @@
   "repository": "git@github.com:ohseunghyeon/calendar-server.git",
   "author": "ohseunghyeon <postercolo@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "start": "node dist/bin/www",
     "build": "tsc",
