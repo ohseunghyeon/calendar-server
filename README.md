@@ -6,8 +6,6 @@
 
 # Run
 
-1. install dependencies by typing below in command line
-
 ```
 $ yarn
 
